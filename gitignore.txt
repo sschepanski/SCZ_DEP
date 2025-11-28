@@ -133,12 +133,4 @@ dmypy.json
 .DS_Store
 .ipynb_checkpoints
 /data
-\[DS\]\ Health_Insurance/data
-\[DS\]\ Heart_attack_prediction/data
-\[DA\]\ Airbnb_Analysis/data     
-\[DS\]\ Kickstarter_Prediction/data
-\[DA\]\ Birth_data/data
-\[DS\]\ Sleep_States/data
-\[DA\]\ Child_adolescent_health/data  
-\[DS\]\ Stroke_Prediction/data
-\[DA\]\ YouTube_Analysis/data
+/.venv
