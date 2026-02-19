@@ -44,7 +44,7 @@ The review reported:
 
 ## Acknowledgements
 
-This risk of bias figure forms one small component of the broader WHO-funded project carried out by the primary research team. Full methodological details, statistical analyses, and interpretation of findings are documented in the main manuscript.
+This risk of bias figure forms one small component of the broader WHO-funded project carried out by the primary research team. Full methodological details, statistical analyses, and interpretation of findings are documented in the main manuscript. The manuscript is published here [Blakeslee, S. B., Koch, A. K., Schröter, M., Jeitler, M., Schepanski, S. N., Boujnah, H., ... & Kessler, C. S. (2026). Effects of greenspace interventions on mental disorders-A systematic review and meta-analysis. Journal of Environmental Psychology, 102919.](https://doi.org/10.1016/j.jenvp.2026.102919)
 
 ## Getting Started
 
