@@ -1,57 +1,80 @@
-# Greenspace Interventions and Mental Disorders - Risk of Bias Figure (Supporting Material)
+# High Resolution Joint Symbolic Dynamics in Depression and Schizophrenia - Risk of Bias Figure Supporting Material
 
 ## Overview
 
-This repository contains a supporting risk of bias analysis created as part of the WHO-funded systematic review and meta-analysis titled “Effects of greenspace interventions on mental disorders” (PROSPERO CRD42023452769). The review summarizes evidence from randomized controlled trials evaluating whether nature-based or greenspace interventions improve clinical outcomes in individuals with mental disorders.
-
-The systematic review was conducted by the original research team listed in the manuscript. This repository is not the primary project repository.
-
-It contains only the code and figure related to the risk of bias assessment that contributed to the full analysis.
+This repository contains the reproducible analysis workflow for the project titled “High Resolution Joint Symbolic Dynamics Reveal Altered Cardiorespiratory Network Pathways and Autonomic Dysregulation in Schizophrenia and Depression”.
+The project investigates autonomic regulation and cardiorespiratory network dynamics in patients with depression and schizophrenia using high resolution joint symbolic dynamics (HRJSD), heart rate variability measures, respiratory parameters, and directional coupling metrics.
+The study includes two separate clinical cohorts. The depression cohort consists of healthy controls, unmedicated patients with depression, and patients treated with antidepressant medication. The schizophrenia cohort consists of a separate healthy control group and patients with schizophrenia.
+This repository serves as the main reproducible analysis environment for the project.
+It contains the code used to clean and harmonize the study data, derive autonomic and symbolic dynamics variables, perform statistical analyses, and generate manuscript ready tables and figures.
 
 ## Purpose of This Repository
 
-My contribution to the project was limited to:
-- performing part of the Cochrane Risk of Bias Tool (RoB-1) assessment
-- generating a risk of bias visualization for the included randomized controlled trials
-- providing supporting code and exportable graphics used in the manuscript supplements
+The purpose of this repository is to provide a transparent and reproducible record of:
+- cleaning and harmonizing raw clinical and physiological datasets
+- deriving HRV, respiration, and symbolic dynamics variables
+- generating depression and schizophrenia comparison groups
+- performing nonparametric group comparisons across physiological measures
+- conducting correlation analyses between symbolic dynamics parameters and classical autonomic markers
+- applying multiple testing correction procedures
+- generating manuscript ready tables, supplementary material, and figures
 
-This repository therefore provides a clean and reproducible record of how the risk of bias figure was generated, independent of the main analysis workflow.
+This repository therefore provides the full reproducible workflow underlying the planned manuscript analyses.
 
 ## Project Context (Short Summary)
 
-The full WHO-commissioned systematic review investigated whether greenspace interventions such as horticultural therapy, forest therapy, and nature-based activities improve mental health outcomes across diagnoses including:
-- depression
-- schizophrenia
-- dementia
-- ADHD
-- adjustment disorder
-- PTSD
-- substance use disorders
+The main goal of the project is to investigate whether patients with depression and schizophrenia show altered autonomic regulation and cardiorespiratory coupling compared with healthy controls.
 
-Seventeen randomized controlled trials (948 participants) were eligible. Eight studies contributed data to the quantitative meta-analyses.
+The depression cohort includes:
+- KON1 = healthy controls
+- DEP = unmedicated depression
+- DEP1 = SSRI treated depression
+- DEP2 = SNRI treated depression
 
-The review reported:
-- beneficial effects of greenspace interventions on depressive symptoms and positive affect
-- significant improvements in positive affect, negative affect, and general psychopathology among individuals with schizophrenia
-- heterogeneity and substantial variation in intervention types, settings, and reporting quality
-- frequent unclear or high risk of bias, motivating the need for a clear RoB-1 figure
+The schizophrenia cohort includes:
+- KON2 = healthy controls
+- SCZ = schizophrenia
+
+The project focuses on physiological variables including:
+- heart rate variability indices such as sdNN, RMSSD, and pvRSA
+- respiratory measures such as breathing frequency and inspiration to expiration ratio
+- symbolic dynamics parameters such as D_12n_tau0, NF, and symbolic entropy
+- directional coupling measures including Area_BBI->RESP and Area_RESP->BBI
+
+The planned analyses include:
+- group comparisons between healthy controls and psychiatric groups
+- comparisons between unmedicated and medicated depression groups
+- evaluation of potential SSRI and SNRI effects on autonomic regulation
+- comparison of schizophrenia related versus depression related alterations
+- correlation analyses between symbolic dynamics measures and classical autonomic markers
+
+The project aims to identify whether altered cardiorespiratory coupling patterns are shared across psychiatric disorders or are disorder specific.
 
 ## Repository Structure
 
-- **`data/`**: minimal data files needed to create the risk of bias plots
-- **`scr/`**: scripts for preparing RoB-1 assessments and generating the graphics
-- **`graphs`**: exported risk of bias plots used for manuscript supplements
+- **`data/`**: cleaned and intermediate datasets used for the analyses
+- **`scr/`**: scripts for data cleaning, variable derivation, statistical analyses, and figure generation
+- **`tables/`**: exported descriptive tables, group comparison results, and supplementary outputs
+- **`graphs`**: exported figures for the manuscript and supplementary material
+
+## Statistical Approach
+
+The main group comparisons are performed using nonparametric two tailed Mann Whitney U tests because several physiological and symbolic dynamics parameters show non normal distributions and unequal variances across groups.
+Spearman rank correlations are used to assess associations between symbolic dynamics measures and classical autonomic markers.
+Given the large number of pairwise comparisons across autonomic and symbolic dynamics variables, p values are adjusted using the Bonferroni Holm procedure.
+Results are primarily reported as mean ± SD together with medians and interquartile ranges where appropriate.
 
 ## Acknowledgements
 
-This risk of bias figure forms one small component of the broader WHO-funded project carried out by the primary research team. Full methodological details, statistical analyses, and interpretation of findings are documented in the main manuscript. The manuscript is published here [Blakeslee, S. B., Koch, A. K., Schröter, M., Jeitler, M., Schepanski, S. N., Boujnah, H., ... & Kessler, C. S. (2026). Effects of greenspace interventions on mental disorders-A systematic review and meta-analysis. Journal of Environmental Psychology, 102919.](https://doi.org/10.1016/j.jenvp.2026.102919)
+This repository represents the main reproducible analysis framework for the project on autonomic dysregulation and altered cardiorespiratory coupling in depression and schizophrenia.
+It serves as the central record of how clinical, physiological, and symbolic dynamics variables were processed, analyzed, and visualized for the planned manuscript.
 
 ## Getting Started
 
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/sschepanski/GreenSpacesMetaAnalysis.git
+   git clone https://github.com/sschepanski/SCZ_DEP.git
    ```
 
 2. **Set up your enviornment using the provided requirement file:**
