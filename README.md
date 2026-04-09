@@ -1,5 +1,4 @@
-# High Resolution Joint Symbolic Dynamics in Depression and Schizophrenia - Risk of Bias Figure Supporting Material
-
+# High Resolution Joint Symbolic Dynamics in Depression and Schizophrenia
 ## Overview
 
 This repository contains the reproducible analysis workflow for the project titled “High Resolution Joint Symbolic Dynamics Reveal Altered Cardiorespiratory Network Pathways and Autonomic Dysregulation in Schizophrenia and Depression”.
